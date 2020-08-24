@@ -1,0 +1,34 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include <array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+using namespace std;
+int main()
+{
+  int arr[8]={-2, -3, 4, -1, -2, 1, 5, -3};
+  int l=0,sum=0,x=0,j,q=7,m=0;
+  for(auto i=2;i<8;i++)
+  {  l=0; x=0;    
+  	 for(j=q;j>1;j--)
+     { sum=0;
+      for(auto k=l;k<l+i;k++)
+      {
+         sum+=arr[k];
+      }
+      l++;
+      if(sum>x)
+      {
+        x=sum;
+      }
+     }
+     q--;
+     cout<<i<<" "<<"Degit maximum sum"<<" :  "<<x<<endl;
+     if(m<x)
+     {
+      m=x;
+     }     
+   }   cout<<"\n\n"<<"MAX_sum   : "<<m<<endl;
+return 0;
+}
