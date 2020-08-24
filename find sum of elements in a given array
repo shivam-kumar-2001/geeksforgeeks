@@ -1,0 +1,16 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include <array>
+#include <list>
+#include <iostream>
+using namespace std;
+int main(void)
+{
+  array<int, 5> arr = {10, 20, 30, 40, 50};
+int i,sum=0;
+for(auto i = arr.begin () ; i != arr.end(); i++)
+{
+    sum+=*i;
+} cout<<sum;
+return 0;
+}
