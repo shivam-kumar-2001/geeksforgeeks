@@ -1,0 +1,22 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include<array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+using namespace std;
+int main()
+{
+  int arr3[100];
+  int arr[]={5, 6, 7, 8, 9, 10, 1, 2, 3};
+  int arr1[]={4,7,3,9};
+  int n=sizeof(arr)/sizeof(arr[0]);
+  int m=sizeof(arr1)/sizeof(arr1[0]);
+  copy_n(arr1, m, arr+n);
+  for(auto i=0;i<m+n;i++)
+  {
+    cout<<arr[i]<<" ";
+  }
+
+return 0;
+}
