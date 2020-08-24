@@ -1,0 +1,31 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include<array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+using namespace std;
+int main()
+{
+  int arr3[100];
+  int arr[]={1, 12, 15, 26, 38};
+  int arr1[]={2, 13, 17, 30, 45};
+  int n=sizeof(arr)/sizeof(arr[0]);
+  int m=sizeof(arr1)/sizeof(arr1[0]);
+  copy_n(arr1, m, arr+n);
+  sort(arr,arr+m+n);
+  cout<<"Sorted array  : ";
+  for(auto i=0;i<m+n;i++)
+  {
+    cout<<arr[i]<<" ";
+  } cout<<endl;
+  if((m+n) % 2==0)
+  {
+    cout<<"Median is  : "<<(arr[(m+n-1)/2]+arr[(m+n)/2])/2<<endl;
+  }
+  else
+  {
+     cout<<"Median is  : "<<arr[(m+n)/2]<<endl;
+  }
+return 0;
+}
