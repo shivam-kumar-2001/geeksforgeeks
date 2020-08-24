@@ -1,0 +1,23 @@
+
+#include <iterator>
+#include<bits/stdc++.h>
+#include<array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+using namespace std;
+int main()
+{
+  int m=3;
+  int arr[]={5, 6, 7, 8, 9, 10, 1, 2, 3};
+  int n=sizeof(arr)/sizeof(arr[0]);
+  for(auto i=0;i<=n;i++)
+  {
+    if(arr[i]==m)
+    {
+      cout<<i<<endl;
+      break;
+    }
+  }
+return 0;
+}
