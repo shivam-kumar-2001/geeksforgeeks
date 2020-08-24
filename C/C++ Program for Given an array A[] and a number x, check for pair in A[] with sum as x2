@@ -1,0 +1,23 @@
+#include <iterator>
+#include<bits/stdc++.h>
+#include <array>
+#include<algorithm>
+#include <list>
+#include <iostream>
+using namespace std;
+int main(void)
+{
+  int arr[6]={ 1, 4, 45, 6, 10, -8};
+  int m=16,count=0;
+  for(auto i=0;i<6;i++)
+  {
+  	for(auto j=0;j<6;j++)
+  	{
+  		if(arr[i]+arr[j]==m && i!=j)
+  		{
+            count++;
+  		}
+  	}
+  } cout<<count;
+return 0;
+}
